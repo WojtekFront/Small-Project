@@ -2,7 +2,8 @@
 $dbServerName = "localhost";
 $dbUserName = "root";
 $dbPassword = "";
-$dbName = "loginSystem";
+$dbName = "formdb";
 
 $conn = mysqli_connect($dbServerName, $dbUserName, $dbPassword, $dbName);
+
 ?>
