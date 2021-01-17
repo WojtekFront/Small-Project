@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2021 at 02:59 PM
+-- Generation Time: Jan 17, 2021 at 06:13 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -32,18 +32,19 @@ CREATE TABLE `firstdb` (
   `id` int(11) NOT NULL,
   `userName` char(20) COLLATE utf8mb4_polish_ci NOT NULL,
   `userEmail` varchar(30) COLLATE utf8mb4_polish_ci NOT NULL,
-  `userPassword` char(20) COLLATE utf8mb4_polish_ci NOT NULL
+  `userPassword` char(20) COLLATE utf8mb4_polish_ci NOT NULL,
+  `administratorRights` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
 
 --
 -- Dumping data for table `firstdb`
 --
 
-INSERT INTO `firstdb` (`id`, `userName`, `userEmail`, `userPassword`) VALUES
-(1, 'wojtek', 'wojtek@wojtek.pl', '123'),
-(2, 'Anna', 'Kowalska@kowalska.pl', '123'),
-(3, 'Maria', 'M.Kowalska@kowalska.pl', '123'),
-(5, 'dsv', 'sv', 'svs');
+INSERT INTO `firstdb` (`id`, `userName`, `userEmail`, `userPassword`, `administratorRights`) VALUES
+(14, 'admin', 'admin@admin.pl', '123', 1),
+(15, 'marek', 'marek@marek.pl', '123', 0),
+(16, 'anna', 'anna@anna.pl', '123', 0),
+(17, 'maria', 'maria@maria.pl', '123', 0);
 
 --
 -- Indexes for dumped tables
@@ -63,7 +64,7 @@ ALTER TABLE `firstdb`
 -- AUTO_INCREMENT for table `firstdb`
 --
 ALTER TABLE `firstdb`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
